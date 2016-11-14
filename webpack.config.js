@@ -1,6 +1,8 @@
 /**
  * Created by Neo on 2016/11/11.
  */
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
   entry: ['./entry.js', './js/index.js'],
   output: {
@@ -22,5 +24,13 @@ module.exports = {
         loader: "babel"
       }
     ]
-  }
+  },
+  plugins: [
+      new HtmlWebpackPlugin({
+          title: 'Hello Webpack',
+          template: './index.html',
+          filename: 'dist/index.html',
+          inject:true
+      })
+  ]
 };
