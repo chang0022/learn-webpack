@@ -1,0 +1,24 @@
+{
+  "name": "learn-webpack",
+  "version": "1.0.0",
+  "description": "一直没有好好学习 webpack ，最近局势动荡不安，赶紧入手认真学习。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chang0022/learn-webpack.git"
+  },
+  "author": "Neo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chang0022/learn-webpack/issues"
+  },
+  "homepage": "https://github.com/chang0022/learn-webpack#readme",
+  "devDependencies": {
+    "css-loader": "^0.25.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3"
+  }
+}
