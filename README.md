@@ -157,3 +157,16 @@ webpack.config.js 添加对应的配置
     }
 
 limit参数，代表如果小于大约50k则会自动帮你压缩base64编码的图片
+
+
+## 使用 webpack + babel 来处理 ES 2015 代码
+
+    cnpm i babel-core babel-loader babel-preset-es2015
+
+webpack.config.js 添加对应的配置
+
+    {
+        test: /\.js|jsx$/, //是一个正则，代表js或者jsx后缀的文件要使用下面的loader
+        loader: "babel"
+    }
+
