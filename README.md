@@ -126,7 +126,7 @@ But the project grows the compilation may take a bit longer.
     webpack --progress --colors
 > --progress 打印打包日志
 
-> --colors -c 带颜色的日志
+> --colors -> -c 带颜色的日志
 
 ### WATCH MODE
 
@@ -140,3 +140,20 @@ But the project grows the compilation may take a bit longer.
 这里只是介绍了 webpack 基本的用法
 
 demo 来自 [webpack/getting-started](http://webpack.github.io/docs/tutorials/getting-started/)
+
+
+
+## 使用 webpack 来处理图片
+
+需要对应的插件加载器有 **css-loader** **style-loader** **url-loader** **file-loader**
+
+> `url-loader` 是对 `file-loader` 的上层封装
+
+webpack.config.js 添加对应的配置
+
+    {
+        test: /\.png|jpg$/,
+        loader: 'url?limit=50000'
+    }
+
+limit参数，代表如果小于大约50k则会自动帮你压缩base64编码的图片
