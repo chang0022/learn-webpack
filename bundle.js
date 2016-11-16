@@ -76,8 +76,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/.0.25.0@css-loader/index.js!./style.css", function() {
-				var newContent = require("!!./../node_modules/.0.25.0@css-loader/index.js!./style.css");
+			module.hot.accept("!!./../node_modules/.npminstall/css-loader/0.25.0/css-loader/index.js!./style.css", function() {
+				var newContent = require("!!./../node_modules/.npminstall/css-loader/0.25.0/css-loader/index.js!./style.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});

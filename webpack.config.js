@@ -28,8 +28,9 @@ module.exports = {
   plugins: [
       new HtmlWebpackPlugin({
           title: 'Hello Webpack',
-          template: './index.html',
-          filename: 'dist/index.html',
+          favicon: './img/logo.png',
+          template: './template/index.html',
+          filename: './index.html',
           inject:true
       })
   ]
