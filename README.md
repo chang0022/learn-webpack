@@ -1,5 +1,5 @@
 # learn-webpack
-一直没有好好学习 webpack ，最近局势动荡不安，赶紧入手认真学习。
+:tada: 一直没有好好学习 webpack ，最近局势动荡不安，赶紧入手认真学习。
 ```
 大致目录结构
 .
@@ -170,3 +170,31 @@ webpack.config.js 添加对应的配置
         loader: "babel"
     }
 
+## 使用 html-webpack-plugin 来简化创建 HTML 文件
+
+- `title`: The title to use for the generated HTML document.
+- `filename`: The file to write the HTML to. Defaults to `index.html`.
+   You can specify a subdirectory here too (eg: `assets/admin.html`).
+- `template`: Webpack require path to the template. Please see the [docs](https://github.com/ampedandwired/html-webpack-plugin/blob/master/docs/template-option.md) for details.
+- `inject`: `true | 'head' | 'body' | false` Inject all assets into the given `template` or `templateContent` - When passing `true` or `'body'` all javascript resources will be placed at the bottom of the body element. `'head'` will place the scripts in the head element.
+- `favicon`: Adds the given favicon path to the output html.
+- `minify`: `{...} | false` Pass a [html-minifier](https://github.com/kangax/html-minifier#options-quick-reference) options object to minify the output.
+- `hash`: `true | false` if `true` then append a unique webpack compilation hash to all
+  included scripts and CSS files. This is useful for cache busting.
+- `cache`: `true | false` if `true` (default) try to emit the file only if it was changed.
+- `showErrors`: `true | false` if `true` (default) errors details will be written into the html page.
+- `chunks`: Allows you to add only some chunks (e.g. only the unit-test chunk)
+- `chunksSortMode`: Allows to control how chunks should be sorted before they are included to the html. Allowed values: 'none' | 'auto' | 'dependency' | {function} - default: 'auto'
+- `excludeChunks`: Allows you to skip some chunks (e.g. don't add the unit-test chunk)
+- `xhtml`: `true | false` If `true` render the `link` tags as self-closing, XHTML compliant. Default is `false`
+
+**[中文翻译]**(https://segmentfault.com/a/1190000007294861)
+
+## 使用 extract-text-webpack-plugin 把 CSS 文件从 JS 里面取出来
+
+wepack 1 中的配置写法
+
+    {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader", {publicPath: '../'})
+    }
